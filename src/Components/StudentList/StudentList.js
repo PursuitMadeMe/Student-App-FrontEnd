@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import StudentCard from '../studentCard/StudentCard';
-// import './StudentList.scss'
+import './StudentList.scss'
 
 
 

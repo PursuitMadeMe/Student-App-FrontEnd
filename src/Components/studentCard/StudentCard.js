@@ -1,5 +1,5 @@
 import React from 'react'
-// import './StudentCard.scss'
+import './StudentCard.scss'
 
 function StudentCard({student}) {
 
