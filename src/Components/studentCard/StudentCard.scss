@@ -1,0 +1,14 @@
+
+.studentCard{
+
+    // every direct child(element)- section -  add a margin on the bottom of 5px (space between each <div>)
+    > * {
+        margin-bottom: 8px;
+    }
+
+// add &__name (__element)to annotate scss for font-weight inside className studentCard__name
+    &__name{
+        font-weight: 600;
+    }
+background-color: aqua;
+}

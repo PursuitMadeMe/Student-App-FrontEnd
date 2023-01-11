@@ -1,0 +1,15 @@
+.studentList {
+    // puts studentList in the middle of the page
+    width: 600px;
+    margin: 10vh auto;
+    // margin off the top and bottom 
+    height: 80vh;
+    background-color: white;
+    // whatever doesn't fit on the page you can scroll (y scroll vertically)
+    overflow-y: scroll;
+    // rounded edges
+    border-radius: 8px;
+    // adds a shadow aroung the box
+    box-shadow: 0px 2px 5px #B6B6B6;
+
+}
