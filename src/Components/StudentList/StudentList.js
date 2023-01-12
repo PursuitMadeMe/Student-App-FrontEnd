@@ -1,15 +1,15 @@
 import React, {useState,useEffect} from 'react'
+import SearchBar from '../searchBar/SearchBar';
 import StudentCard from '../studentCard/StudentCard';
 import './StudentList.scss'
-
-
-
 
 
 function StudentList() {
 // hooks - what do we want (list of students)
 const [students, setStudents] = useState([]);
 
+// filter list of student with searchbar
+const [searchTerm, setSearchTerm] = useState('')
 
 // functions - to populate the useState array with data 
 useEffect(() => {
@@ -35,7 +35,9 @@ useEffect(() => {
     
     // makes a scrollable studentList container in the middle of the page
     <div className='studentList'>
+        <input className='studentList__search' placeholder='Search By Name'></input>
 
+        <SearchBar searchTerm={searchTerm}/>
     {/* iterate through the students array (25) and return StudentCard component with all the students*/}
         {students.map(student => {
             return (

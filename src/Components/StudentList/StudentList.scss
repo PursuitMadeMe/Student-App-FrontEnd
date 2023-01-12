@@ -12,4 +12,20 @@
     // adds a shadow aroung the box
     box-shadow: 0px 2px 5px #B6B6B6;
 
+    &__search {
+        width: 93%;
+        height: 30px;
+        border: none;
+        padding: 5px 10px ;
+        border-bottom: 2px solid #efefef;
+        margin: 10px;
+        font-size: 16px;
+        
+        // when the user starts typing make the bottom border a solid 2px
+        &:focus { 
+            outline: none;
+            border-bottom: 2px solid #858585;
+        }
+    }
+
 }
