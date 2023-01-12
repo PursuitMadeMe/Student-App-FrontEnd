@@ -30,14 +30,32 @@ useEffect(() => {
 }, []); // empty array means run StudentList on mount 
 
 
+// when search term is updated, this component will render 
+// what to do on render
+
+
+
+// let filteredStudents = students
+
+// if(searchTerm) {
+//     filteredStudents = students.filter(student => {
+//         const fullName = `${student.firstName} ${student.lastName}`
+
+//         const fullNameToLowerCase = fullName.toLowerCase()
+
+//        const searchTermToLowerCase = searchTerm.toLowerCase()
+
+//        return fullNameToLowerCase.includes(searchTermToLowerCase)
+
+//     })
+// }
+// 
 // return or JSX
   return (
     
     // makes a scrollable studentList container in the middle of the page
     <div className='studentList'>
-        <input className='studentList__search' placeholder='Search By Name'></input>
-
-        <SearchBar searchTerm={searchTerm}/>
+    <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
     {/* iterate through the students array (25) and return StudentCard component with all the students*/}
         {students.map(student => {
             return (
