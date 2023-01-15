@@ -31,25 +31,24 @@ useEffect(() => {
 
 
 // when search term is updated, this component will render 
-// what to do on render
+// what to do on re render? Filter student list based on searchterm 
+// *******FILTER FEATURE FOR SEARCHBAR*********
 
+let filteredStudents = students
 
+if(searchTerm) {
+    filteredStudents = students.filter(student => {
+        const fullName = `${student.firstName} ${student.lastName}`
 
-// let filteredStudents = students
+        const fullNameToLowerCase = fullName.toLowerCase()
 
-// if(searchTerm) {
-//     filteredStudents = students.filter(student => {
-//         const fullName = `${student.firstName} ${student.lastName}`
+       const searchTermToLowerCase = searchTerm.toLowerCase()
 
-//         const fullNameToLowerCase = fullName.toLowerCase()
+       return fullNameToLowerCase.includes(searchTermToLowerCase)
 
-//        const searchTermToLowerCase = searchTerm.toLowerCase()
+    })
+}
 
-//        return fullNameToLowerCase.includes(searchTermToLowerCase)
-
-//     })
-// }
-// 
 // return or JSX
   return (
     
@@ -57,7 +56,8 @@ useEffect(() => {
     <div className='studentList'>
     <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
     {/* iterate through the students array (25) and return StudentCard component with all the students*/}
-        {students.map(student => {
+    {/* add filteredStudents.map to search through ALL students*************************** */}
+        {filteredStudents.map(student => {
             return (
                 <div>
 
@@ -66,6 +66,7 @@ useEffect(() => {
                 </div>
             )
         })}
+        {filteredStudents.length === 0 &&  <div className='studentList__noResults'>No Results</div>}
     </div>
   )
 }

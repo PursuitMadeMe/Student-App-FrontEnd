@@ -9,14 +9,12 @@ const updateSearchTerm = (e) => {
     setSearchTerm(e.target.value)
 }
   return (
-    <div>
         <input 
         className='searchBar'
         placeholder='Search By Name'
         value={searchTerm}
         onChange={updateSearchTerm}
         />
-    </div>
   )
 }
 

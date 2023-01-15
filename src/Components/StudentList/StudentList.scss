@@ -12,5 +12,12 @@
     // adds a shadow aroung the box
     box-shadow: 0px 2px 5px #B6B6B6;
 
+    &__noResults {
+        font-weight: 600;
+        margin: 0 auto;
+        display: table;
+        padding-top: 200px;
+    }
+
 
 }
